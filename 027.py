@@ -2,8 +2,12 @@ import math
 
 primes = { }
 def prime(p):
-    if p == 1 or p == 2:
+    if p == 1:
+        return False
+    if p == 2:
         return True
+    if p % 2 == 0:
+        return False
     if p in primes:
         return primes[p]
     for x in range(3, int(math.sqrt(p)) + 1, 2):
