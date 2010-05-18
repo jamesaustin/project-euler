@@ -28,9 +28,12 @@ def circular_prime(x):
             return True
 
 c = 1
-for x in range(3, 1000000, 2):
+for x in range(3, 199999, 2):
     if circular_prime(x):
-        c += 1
+        if x > 99999:
+            c += len(str(x))
+        else:
+            c += 1
 print c
 
 # or
