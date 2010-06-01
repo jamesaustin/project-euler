@@ -25,7 +25,7 @@ def int2string(n):
     return answer.strip()
 
 m = 0
-for x in range(1, 1001):
+for x in xrange(1, 1001):
     m += len(int2string(x))
 print m
 
@@ -57,6 +57,6 @@ def int2string2(n):
     return answer
 
 m = 0
-for x in range(1, 1001):
+for x in xrange(1, 1001):
     m += int2string2(x)
 print m

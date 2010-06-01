@@ -10,7 +10,7 @@ def prime(p):
         return False
     if p in primes:
         return primes[p]
-    for x in range(3, int(math.sqrt(p)) + 1, 2):
+    for x in xrange(3, int(math.sqrt(p)) + 1, 2):
         if p % x == 0:
             primes[p] = False
             return False
@@ -18,8 +18,8 @@ def prime(p):
     return True
 
 (A, B, C) = (0, 0, 0)
-for a in range(-999, 999, 1):
-    for b in range(-999, 999, 1):
+for a in xrange(-999, 999, 1):
+    for b in xrange(-999, 999, 1):
         (c, p) = (0, True)
         while p is True:
             N = c * c + a * c + b

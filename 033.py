@@ -1,6 +1,6 @@
 (X, Y) = (1, 1)
-for x in range(10, 100):
-    for y in range(x + 1, 100):
+for x in xrange(10, 100):
+    for y in xrange(x + 1, 100):
         (sx, sy) = (str(x), str(y))
 
         if sx[1] == '0' and sy[1] == '0':

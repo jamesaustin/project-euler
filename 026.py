@@ -13,7 +13,7 @@ def f(n):
         m += 1
 
 (c, m) = (0, 0)
-for n in range(1, 1000):
+for n in xrange(1, 1000):
     x = f(n)
     if x > c:
         c = x

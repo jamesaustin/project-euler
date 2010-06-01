@@ -23,11 +23,11 @@ print m
 l = 2000000
 primes = [True] * l
 
-for x in range(4, l, 2):
+for x in xrange(4, l, 2):
     primes[x] = False
 
-for x in range(3, l / 2, 2):
-    for y in range(x * 2, l, x):
+for x in xrange(3, l / 2, 2):
+    for y in xrange(x * 2, l, x):
         primes[y] = False
 
 m = 2

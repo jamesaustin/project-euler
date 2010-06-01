@@ -6,16 +6,15 @@ def next(x):
         return (3 * x) + 1
 
 (X, C) = (0, 0)
-for x in range(999999, 1, -1):
+for x in xrange(999999, 1, -1):
     (y, c) = (x, 1)
     while y != 1:
         y = next(y)
         c += 1
     if c > C:
         (X, C) = (x, c)
-        print (X, C)
 
-print X, C
+print X
 
 # or
 
@@ -31,10 +30,9 @@ def next2(x):
     return history[x]
 
 (X, C) = (0, 0)
-for x in range(999999, 1, -1):
+for x in xrange(999999, 1, -1):
     c = next2(x)
     if c > C:
         (X, C) = (x, c)
-        print (X, C)
 
-print X, C
+print X

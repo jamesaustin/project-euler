@@ -28,20 +28,20 @@ def combinations(s):
     def index(x, y):
         return x + y * s
 
-    for x in range(0, s):
-        for y in range(0, s - 4):
+    for x in xrange(0, s):
+        for y in xrange(0, s - 4):
             yield (index(x, y), index(x, y + 1), index(x, y + 2), index(x, y + 3))
 
-    for y in range(0, s):
-        for x in range(0, s - 4):
+    for y in xrange(0, s):
+        for x in xrange(0, s - 4):
             yield (index(x, y), index(x + 1, y), index(x + 2, y), index(x + 3, y))
 
-    for x in range(0, s - 4):
-        for y in range(0, s - 4):
+    for x in xrange(0, s - 4):
+        for y in xrange(0, s - 4):
             yield (index(x, y), index(x + 1, y + 1), index(x + 2, y + 2), index(x + 3, y + 3))
 
-    for x in range(0, s - 4):
-        for y in range(3, s):
+    for x in xrange(0, s - 4):
+        for y in xrange(3, s):
             yield (index(x, y), index(x + 1, y - 1), index(x + 2, y - 2), index(x + 3, y - 3))
 
 m = 0

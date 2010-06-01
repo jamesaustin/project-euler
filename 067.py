@@ -104,7 +104,7 @@ previous = None
 for l in reversed(numbers.split('\n')):
     v = [int(x) for x in l.split()]
     if previous:
-        for i in range(len(v)):
+        for i in xrange(len(v)):
             v[i] += max(previous[i], previous[i + 1])
     previous = v
 

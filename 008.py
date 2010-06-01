@@ -22,7 +22,7 @@ digits = """\
 
 mx = 0
 d = [int(x) for x in digits]
-for x in range(0, len(d) - 4):
+for x in xrange(0, len(d) - 4):
     (v1, v2, v3, v4, v5) = d[x:x + 5]
     m = v1 * v2 * v3 * v4 * v5
     if m > mx:
@@ -32,5 +32,5 @@ print mx
 
 # or
 
-c = [ d[x] * d[x+1] * d[x+2] * d[x+3] * d[x+4] for x in range(0, len(d) - 4) ]
+c = [ d[x] * d[x+1] * d[x+2] * d[x+3] * d[x+4] for x in xrange(0, len(d) - 4) ]
 print max(c)

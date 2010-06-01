@@ -1,8 +1,8 @@
 numbers = "123456789"
 m = 0
 products = { }
-for x in range(0, 50):
-    for y in range(0, 2000):
+for x in xrange(0, 50):
+    for y in xrange(0, 2000):
         z = x * y
         p = str(x) + str(y) + str(z)
         if len(p) == 9:

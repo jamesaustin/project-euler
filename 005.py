@@ -5,7 +5,7 @@ print 232792560
 limit = 20
 m = 1
 primes = [ ]
-for i in range(2, limit + 1):
+for i in xrange(2, limit + 1):
     for p in primes:
         if i % p == 0:
             break

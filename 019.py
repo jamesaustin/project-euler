@@ -12,8 +12,8 @@
 import datetime
 
 m = 0
-for x in range(1901, 2001):
-    for y in range(1, 13):
+for x in xrange(1901, 2001):
+    for y in xrange(1, 13):
         if datetime.date(x, y, 1).weekday() == 6:
             m += 1
 print m
@@ -25,8 +25,8 @@ leap = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 m = 0
 d = 1
-for x in range(1901, 2001):
-    for y in range(0, 12):
+for x in xrange(1901, 2001):
+    for y in xrange(0, 12):
         if x % 4 == 0:
             d += leap[y]
         else:
