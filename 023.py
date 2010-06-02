@@ -1,8 +1,6 @@
-import math
-
 def d(n):
     count = 1
-    for x in xrange(2, int(math.sqrt(n)) + 1):
+    for x in xrange(2, int(n ** 0.5) + 1):
         (d, r) = divmod(n, x)
         if r == 0:
             count += x

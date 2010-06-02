@@ -1,5 +1,3 @@
-import math
-
 primes = { }
 def prime(p):
     if p == 1:
@@ -10,7 +8,7 @@ def prime(p):
         return False
     if p in primes:
         return primes[p]
-    for x in xrange(3, int(math.sqrt(p)) + 1, 2):
+    for x in xrange(3, int(p ** 0.5) + 1, 2):
         if p % x == 0:
             primes[p] = False
             return False

@@ -1,10 +1,8 @@
-import math
-
 primes = [2]
 x = 3
 m = 2
 while x < 2000000:
-    r = math.pow(x, 0.5)
+    r = x ** 0.5
     for p in primes:
         if p > r:
             primes.append(x)

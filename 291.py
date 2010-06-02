@@ -1,7 +1,5 @@
-import math
-
 limit = 5000000000000000
-d = math.sqrt(2 * limit - 1)
+d = (2 * limit - 1) ** 0.5
 N = int((d - 1) / 2) + 1 # Add 1 to simplify xrange tests and switch tests.
 
 f = [2 * i * i + 2 * i + 1 for i in xrange(1, N)]

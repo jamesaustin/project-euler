@@ -1,8 +1,7 @@
 import itertools
-import math
 
 def prime(p):
-    for x in xrange(3, int(math.sqrt(p)) + 1, 2):
+    for x in xrange(3, int(p ** 0.5) + 1, 2):
         if p % x == 0:
             return False
     return True

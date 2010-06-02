@@ -1,5 +1,3 @@
-import math
-
 def prime(p):
     for x in xrange(2, p):
         if p % x == 0:

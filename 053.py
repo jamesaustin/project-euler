@@ -1,8 +1,9 @@
-import math
+def factorial(n):
+    return reduce(lambda a, b: a * b, xrange(1, n + 1), 1)
 
 l = 100
 
-factorials = [math.factorial(x) for x in xrange(0, l + 1)]
+factorials = [factorial(x) for x in xrange(0, l + 1)]
 
 count = 0
 for n in xrange(1, l + 1):
