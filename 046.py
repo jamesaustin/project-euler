@@ -1,26 +1,11 @@
-primes = { }
-def prime(p):
-    if p == 1:
-        return False
-    if p == 2:
-        return True
-    if p % 2 == 0:
-        return False
-    if p in primes:
-        return primes[p]
-    for x in xrange(3, int(p ** 0.5) + 1, 2):
-        if p % x == 0:
-            primes[p] = False
-            return False
-    primes[p] = True
-    return True
+from primes import is_prime
 
 m = 3
 while True:
-    if prime(m) is False:
+    if is_prime(m) is False:
         for x in xrange(1, m):
             n = m - 2 * x * x
-            if n > 0 and prime(n):
+            if n > 0 and is_prime(n):
                 break
         else:
             break

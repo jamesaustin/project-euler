@@ -1,15 +1,9 @@
 import itertools
 
+from primes import is_prime_list
+
 l = 10000
-is_prime = [False, False] + [True] * (l - 2)
-
-for x in xrange(4, l, 2):
-    is_prime[x] = False
-
-for x in xrange(3, l / 2, 2):
-    if is_prime[x] == True:
-        for y in xrange(x * 2, l, x):
-            is_prime[y] = False
+is_prime = is_prime_list(l)
 
 solutions = set()
 for c in itertools.combinations('1123345677899', 4):

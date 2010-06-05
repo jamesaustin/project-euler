@@ -1,19 +1,4 @@
-primes = { }
-def prime(p):
-    if p == 1:
-        return False
-    if p == 2:
-        return True
-    if p % 2 == 0:
-        return False
-    if p in primes:
-        return primes[p]
-    for x in xrange(3, int(p ** 0.5) + 1, 2):
-        if p % x == 0:
-            primes[p] = False
-            return False
-    primes[p] = True
-    return True
+from primes import is_prime_c
 
 (A, B, C) = (0, 0, 0)
 for a in xrange(-999, 999, 1):
@@ -23,7 +8,7 @@ for a in xrange(-999, 999, 1):
             N = c * c + a * c + b
             if N <= 0:
                 break
-            p = prime(N)
+            p = is_prime_c(N)
             c += 1
         c -= 1
         if c > C:

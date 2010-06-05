@@ -1,15 +1,9 @@
+from primes import is_prime_list
+
 import itertools
 
 l = 1000000
-is_prime = [False, False] + [True] * (l - 2)
-
-for x in xrange(4, l, 2):
-    is_prime[x] = False
-
-for x in xrange(3, l / 2, 2):
-    if is_prime[x] == True:
-        for y in xrange(x * 2, l, x):
-            is_prime[y] = False
+is_prime = is_prime_list(l)
 
 def f():
     for (n1, n2 ,n3) in itertools.product('123456789', repeat=3):

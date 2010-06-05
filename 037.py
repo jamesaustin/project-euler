@@ -1,19 +1,4 @@
-primes = { }
-def prime(p):
-    if p == 1:
-        return False
-    if p == 2:
-        return True
-    if p % 2 == 0:
-        return False
-    if p in primes:
-        return primes[p]
-    for x in xrange(3, int(p ** 0.5) + 1, 2):
-        if p % x == 0:
-            primes[p] = False
-            return False
-    primes[p] = True
-    return True
+from primes import is_prime
 
 def truncatable_prime(p):
     d = 10
@@ -21,7 +6,7 @@ def truncatable_prime(p):
     while tl > 10:
         tl = p / d
         tr = p % d
-        if not prime(tl) or not prime(tr):
+        if not is_prime(tl) or not is_prime(tr):
             return False
         d *= 10
     return True
@@ -30,7 +15,7 @@ x = 11
 m = 0
 n = 0
 while n < 11:
-    if prime(x):
+    if is_prime(x):
         if truncatable_prime(x):
             m += x
             n += 1
@@ -56,7 +41,7 @@ while n < 11:
             t *= 10
 
         # Test x
-        if prime(x):
+        if is_prime(x):
             if truncatable_prime(x):
                 m += x
                 n += 1

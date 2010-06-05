@@ -1,13 +1,9 @@
-def prime(p):
-    for x in xrange(2, p):
-        if p % x == 0:
-            return False
-    return True
+from primes import is_prime
 
 x = 2
 y = 600851475143
 while x < y:
-    if prime(x):
+    if is_prime(x):
         while y % x == 0:
             y = y/x
     x += 1

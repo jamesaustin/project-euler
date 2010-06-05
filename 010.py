@@ -1,3 +1,5 @@
+from primes import is_prime_list
+
 primes = [2]
 x = 3
 m = 2
@@ -19,14 +21,7 @@ print m
 # or
 
 l = 2000000
-primes = [True] * l
-
-for x in xrange(4, l, 2):
-    primes[x] = False
-
-for x in xrange(3, l / 2, 2):
-    for y in xrange(x * 2, l, x):
-        primes[y] = False
+primes = is_prime_list(l)
 
 m = 2
 x = 3
