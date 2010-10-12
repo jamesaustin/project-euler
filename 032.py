@@ -11,4 +11,3 @@ for x in xrange(0, 50):
                     m += z
                     products[z] = 1
 print m
-            

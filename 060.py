@@ -1,5 +1,3 @@
-import itertools
-
 from primes import is_prime_c as is_prime
 from primes import prime_list
 
